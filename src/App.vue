@@ -1,24 +1,57 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <p>按钮类型</p>
+      <VButton @click="onClick">Basic Button</VButton>
+      <v-button outline @click="onClick">Outline Button</v-button>
+      <v-button clear @click="onClick">Clear Button</v-button>
+      <v-button round @click="onClick">Round Button</v-button>
+      <v-button block @click="onClick">Block Button</v-button>
+      <v-button full @click="onClick">Full Button</v-button>
+      <v-button disabled @click="onClick">Disabled Button</v-button>
+    </div>
+
+    <div>
+      <p>按钮大小</p>
+      <v-button title="small" @click="onClick" />
+      <v-button small @click="onClick">Small Button</v-button>
+      <v-button @click="onClick">Normal Button</v-button>
+      <v-button large @click="onClick">Large Button</v-button>
+    </div>
+
+    <div>
+      <p>按钮主题</p>
+      <v-button @click="onClick">Primary Button</v-button>
+      <v-button light @click="onClick">Light Button</v-button>
+      <v-button success @click="onClick">Success Button</v-button>
+      <v-button info @click="onClick">Info Button</v-button>
+      <v-button warning @click="onClick">Warning Button</v-button>
+      <v-button danger @click="onClick">Danger Button</v-button>
+      <v-button dark @click="onClick">Dark Button</v-button>
+    </div>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
+<script>
+import VButton from "./components/Button";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    VButton
+  },
+  methods: {
+    onClick: title => alert(title)
   }
-}
+};
 </script>
+
+
+
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
