@@ -29,20 +29,29 @@
       <v-button danger @click="onClick">Danger Button</v-button>
       <v-button dark @click="onClick">Dark Button</v-button>
     </div>
+    <v-list :items="items"></v-list>
   </div>
 </template>
 
 
 <script>
 import VButton from "./components/Button";
+import VList from "./components/List";
+
 export default {
   name: "app",
   components: {
-    VButton
+    VButton,
+    VList,
   },
   methods: {
-    onClick: title => alert(title)
-  }
+    onClick: (title) => alert(title),
+  },
+  data() {
+    return {
+      items: [{ message: "Foo" }, { message: "Bar" }],
+    };
+  },
 };
 </script>
 
