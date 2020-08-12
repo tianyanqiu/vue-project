@@ -32,6 +32,8 @@
     <v-list :items="items"></v-list>
     <v-list-object :object="object" />
     <v-todo-list />
+    <br />
+    <v-form />
   </div>
 </template>
 
@@ -41,6 +43,7 @@ import VButton from "./components/Button";
 import VList from "./components/List";
 import VListObject from "./components/ListForObject";
 import VTodoList from "./components/TodoList";
+import VForm from "./components/FromDemo";
 
 export default {
   name: "app",
@@ -49,6 +52,7 @@ export default {
     VList,
     VListObject,
     VTodoList,
+    VForm,
   },
   methods: {
     onClick: (title) => alert(title),
