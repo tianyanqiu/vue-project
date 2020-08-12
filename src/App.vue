@@ -30,6 +30,8 @@
       <v-button dark @click="onClick">Dark Button</v-button>
     </div>
     <v-list :items="items"></v-list>
+    <v-list-object :object="object" />
+    <v-todo-list />
   </div>
 </template>
 
@@ -37,12 +39,16 @@
 <script>
 import VButton from "./components/Button";
 import VList from "./components/List";
+import VListObject from "./components/ListForObject";
+import VTodoList from "./components/TodoList";
 
 export default {
   name: "app",
   components: {
     VButton,
     VList,
+    VListObject,
+    VTodoList,
   },
   methods: {
     onClick: (title) => alert(title),
@@ -50,6 +56,11 @@ export default {
   data() {
     return {
       items: [{ message: "Foo" }, { message: "Bar" }],
+      object: {
+        title: "How to do lists in Vue",
+        author: "Jane Doe",
+        publishedAt: "2016-04-10",
+      },
     };
   },
 };
