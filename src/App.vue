@@ -34,6 +34,12 @@
     <v-todo-list />
     <br />
     <v-form />
+
+    <a v-bind:href="url" class="nav-link">
+      <slot></slot>
+    </a>
+
+    <input v-focus />
   </div>
 </template>
 
@@ -66,6 +72,14 @@ export default {
         publishedAt: "2016-04-10",
       },
     };
+  },
+  directives: {
+    focus: {
+      // 指令的定义
+      inserted: function (el) {
+        el.focus();
+      },
+    },
   },
 };
 </script>
