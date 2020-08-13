@@ -43,9 +43,7 @@
 
     <div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
 
-    <anchored-heading :level="1">
-      <a name="hello-world" href="#hello-world">Hello world!</a>
-    </anchored-heading>
+    <anchored-heading :level="1">Hello world!</anchored-heading>
   </div>
 </template>
 
