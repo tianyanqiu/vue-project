@@ -42,6 +42,10 @@
     <input v-focus />
 
     <div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
+
+    <anchored-heading :level="1">
+      <a name="hello-world" href="#hello-world">Hello world!</a>
+    </anchored-heading>
   </div>
 </template>
 
@@ -52,6 +56,7 @@ import VList from "./components/List";
 import VListObject from "./components/ListForObject";
 import VTodoList from "./components/TodoList";
 import VForm from "./components/FromDemo";
+import AnchoredHeading from "./components/AnchoredHeading";
 
 export default {
   name: "app",
@@ -61,6 +66,7 @@ export default {
     VListObject,
     VTodoList,
     VForm,
+    AnchoredHeading,
   },
   methods: {
     onClick: (title) => alert(title),
